@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  script.
+    $(function(){
+      var socket = io();
+
+      $('#msgBtn').click(function(){
+        var msg = '#{name}' + ' : ' + $('#msgInput').val();
+        msg = $('#msgTextarea').val() + msg + '\n';
+        $('#msgInput').val('');
+        socket.emit('chat message', msg);
+      });
+
+      socket.on('chat message', function(msg){
+        $('#msgTextarea').val(msg);
+     });
+
+      //should look at this code because it does nothing
+      //$('#msgInput').keypressed(function() {
+      //	console.log("key pressed");
+      //	var code = e.keyCode || e.which;
+      //	if (code == 13) {
+      //    var msg = '#{name}' + ' : ' + $('#msgInput').val();
+      //    $('#msgTextarea').val($('#msgTextarea').val() + msg + '\n');
+      //    $('#msgInput').val('');
+      // }
+      //});
+    
+    })
+  h1 You Are Chatting As #{name}
+  textarea#msgTextarea(rows='10' cols='80')
+  br
+  input#msgInput(type='text')
+  input#msgBtn(type='button' value='Send')

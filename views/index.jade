@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  form#nameDiv(action='chat')
+    h1 Please Enter a Name:
+    input#nameInput(type='text' name='name')
+    input#nameBtn(type='submit' value='Submit')
+
+  script(src="/socket.io/socket.io.js").
+    var socket = io();
+
