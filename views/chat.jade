@@ -6,15 +6,24 @@ block content
       var socket = io();
 
       $('#msgBtn').click(function(){
-        var msg = '#{name}' + ' : ' + $('#msgInput').val();
-        msg = $('#msgTextarea').val() + msg + '\n';
-        $('#msgInput').val('');
-        socket.emit('chat message', msg);
+        if ($('#msgInput').val() != '') {
+          var msg = $('#msgInput').val() + '\n';
+          var allMsg = $('#msgTextarea').val() + '#{name}' + ' : ' + msg;
+          socket.emit('chat message', allMsg);
+          $('#msgInput').val('');
+          $.post(window.location.href, { name: '#{name}', chat: msg});
+        }
       });
 
       socket.on('chat message', function(msg){
-        $('#msgTextarea').val(msg);
-     });
+        if (msg != "") {
+          $('#msgTextarea').val(msg);
+        } else {
+        $.getJSON(window.location.href, function(data) {
+            $('#msgTextarea').val(data);
+          });
+        }
+      });
 
       //should look at this code because it does nothing
       //$('#msgInput').keypressed(function() {
@@ -27,7 +36,8 @@ block content
       // }
       //});
     
-    })
+    });
+
   h1 You Are Chatting As #{name}
   textarea#msgTextarea(rows='10' cols='80')
   br
