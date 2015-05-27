@@ -60,7 +60,7 @@ app.use(function(err, req, res, next) {
 
 
 //connecting to MongoDB using Mongoose
-mongoose.connect('mongodb://localhost/myChatApp', function(err) {
+mongoose.connect('mongodb://localhost:27017/myChatApp', function(err) {
     if(err) {
         console.log('connection error', err);
     } else {
