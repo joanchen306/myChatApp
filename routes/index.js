@@ -28,7 +28,6 @@ router.get('/chat', function(req, res, next) {
               var msg = "";
               for(i = 0; i < post.length; i++) {
                 msg = msg + post[i]["name"] + ": " + post[i]["chat"];
-                console.log(i);
               }
               res.json(msg);
             }

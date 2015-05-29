@@ -1,9 +1,11 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title=title
+    link(rel='stylesheet', type='text/css' href='/vendor/angular-material/angular-material.min.css')
     script(src='js/jquery-2.1.4.min.js')
-    script(src="/socket.io/socket.io.js")
-  body
+    script(src='/socket.io/socket.io.js')
+    script(type='text/javascript' src='/js/chat.js')
+
+  body(ng-app='myChatApp' ng-controller="ChatController as chat")
     block content

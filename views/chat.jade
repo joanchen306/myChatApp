@@ -5,6 +5,11 @@ block content
     $(function(){
       var socket = io();
 
+      $(document).ready(function(){
+        $('#msgTextarea').scrollTop($('#textarea_id')[0].scrollHeight);
+      });
+
+
       $('#msgBtn').click(function(){
         if ($('#msgInput').val() != '') {
           var msg = $('#msgInput').val() + '\n';

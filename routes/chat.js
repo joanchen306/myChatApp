@@ -1,17 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-var mongoose = require('mongoose');
-var Todo = require('../models/Chat.js');
-
-
-/* GET /todos listing. */
+/* GET users listing. */
 router.get('/', function(req, res, next) {
-  Todo.find(function (err, todos) {
-    if (err) return next(err);
-    res.json(todos);
-  });
+  res.render('chat');
 });
-
 
 module.exports = router;

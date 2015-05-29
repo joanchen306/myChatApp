@@ -6,7 +6,7 @@ var io = require('socket.io');
  */
 
 var app = require('../app');
-var debug = require('debug')('joanchen:server');
+var debug = require('debug')('myChatApp:server');
 var http = require('http');
 
 /**

@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
-var todos = require('./routes/chat');
+var chats = require('./routes/chat');
 
 var app = express();
 
@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/todos', todos);
+app.use('/chat', chats);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -62,9 +62,9 @@ app.use(function(err, req, res, next) {
 //connecting to MongoDB using Mongoose
 mongoose.connect('mongodb://localhost:27017/myChatApp', function(err) {
     if(err) {
-        console.log('connection error', err);
+        console.log('mongodb connection error', err);
     } else {
-        console.log('connection successful');
+        console.log('mongodb connection successful');
     }
 });
 

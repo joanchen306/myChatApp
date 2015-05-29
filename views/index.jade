@@ -1,11 +1,16 @@
 extends layout
 
 block content
-  form#nameDiv(action='chat')
-    h1 Please Enter a Name:
-    input#nameInput(type='text' name='name')
-    input#nameBtn(type='submit' value='Submit')
-
+  div(ng-show="!chat.isReg()")
+    name-form
+    p {{ chat.registered }}
+    
   script(src="/socket.io/socket.io.js").
     var socket = io();
+  script(src='/vendor/angular/angular.min.js')
+  script(src='/vendor/angular-animate/angular-animate.min.js')
+  script(src='/vendor/angular-aria/angular-aria.min.js')
+  script(src='/vendor/angular-material/angular-material.min.js')
+  script(src='/js/bundle.js')
+
 
