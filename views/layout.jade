@@ -1,11 +1,15 @@
 doctype html
-html
+html(ng-app="myChatApp")
   head
     title=title
-    link(rel='stylesheet', type='text/css' href='/vendor/angular-material/angular-material.min.css')
+    link(rel='stylesheet', type='text/css' href='/js/bootstrap/dist/css/bootstrap.min.css')
+    //link(rel='stylesheet', type='text/css' href='/css/chat.css')
+    script(type='text/javascript' src='vendor/angular/angular.min.js')
     script(src='js/jquery-2.1.4.min.js')
     script(src='/socket.io/socket.io.js')
-    script(type='text/javascript' src='/js/chat.js')
+    script(type='text/javascript' src='vendor/angular-socket-io/socket.js')
+    //script(type='text/javascript' src='/js/chat.js')
+    script(type='text/javascript' src='/js/bootstrap/dist/css/bootstrap.min.css')
 
-  body(ng-app='myChatApp' ng-controller="ChatController as chat")
+  body(ng-controller="ChatController as chat")
     block content
