@@ -1,0 +1,11 @@
+<form name="nameForm" class="form-horizontal" ng-controller="NameController as nameCtrl" ng-submit="nameForm.$valid && nameCtrl.setName()" novalidate>
+  <div class="form-group">
+    <label for="inputName" class="col-xs-offset-2  control-label col-xs-2">Please Input a Name</label>
+    <div class="col-xs-5">
+      <input ng-model="nameCtrl.name" type="name" class="form-control" id="inputName" placeholder="Name" required>
+    </div>
+    <div class="col-xs-2">
+      <button type="submit" class="btn btn-primary" ng-click="nameForm.$valid && chat.setReg()">Start Chatting</button>
+    </div>
+  </div>
+</form>

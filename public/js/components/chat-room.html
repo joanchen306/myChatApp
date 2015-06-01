@@ -1,0 +1,14 @@
+<h2> Chatting as {{ chat.user['username'] }} </h2>
+<div class="panel panel-default">
+  <div class="panel-body" style="min-height: 300px; max-height: 300px;overflow-y: scroll;">
+    <p ng-repeat="message in msg" style="margin-left: 1em; margin-top: 0em; margin-bottom: 0em;"> <b>{{message.name}}</b>:{{message.chat}} </p> 
+  </div>
+</div>
+<form name="chatForm" class="form-horizontal" ng-submit="chatForm.$valid" novalidate>
+  <div class="col-xs-10">
+   <input ng-model="chat.chat" type="chat" class="form-control" id="inputMsg" placeholder="Say Somthing!!" required>
+  </div>
+  <div class="col-xs-2">
+    <button type="submit" class="btn btn-primary" ng-click="chatForm.$valid && chat.sendMsg()">Send</button>
+  </div>
+</form>
