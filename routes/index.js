@@ -19,16 +19,11 @@ router.get('/chat', function(req, res, next) {
     	return next(err);
       } else {
       	  res.format({
-      	    html: function() {
-      	  	  var name = req.query.name;
-			  var title = "ChatRoom: " + name;
-			  res.render('chat', { title: title, name: name});
-      	    },
       	    json: function() {
               var msg = [];
               for(i = 0; i < post.length; i++) {
                 msg.push({name: post[i]["name"], chat: " " + post[i]["chat"]});
-                //alert(msg);
+                //console.log(msg);
               }
               res.json(msg);
             }

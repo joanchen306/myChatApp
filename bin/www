@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 var io = require('socket.io');
+var mongoose = require('mongoose');
+var Chat = require('../models/Chat.js');
 
 /**
  * Module dependencies.
@@ -22,21 +24,57 @@ app.set('port', port);
 
 var server = http.createServer(app);
 var message = [];
+var people = [];
+var ids = [];
+var h = 0;
 
 io = io.listen(server);
 io.on('connection', function(socket){
   console.log('User connected. Socket id %s', socket.id);
   socket.emit('chat message', message);
+  socket.emit('people', people);
+  socket.emit('ids', ids);
+  socket.emit('height', h);
+  ids.push(socket.id);
 
   socket.on('disconnect', function(){
-    console.log('User disconnected. Socket id %s', socket.id);
+    //console.log('User disconnected. Socket id %s', socket.id);
+    for(i = 0; i < ids.length; i++) {
+      if(ids[i] == socket.id && ids.length == people.length) {
+        ids.splice(i, 1);
+        var ann = {name: "Announcement", chat : "     " + people[i] + " has left the chat, we'll miss him/her"}
+        ann = new Chat(ann);
+        ann.save(function(err, ann) {
+          if (err) return console.error(err);
+        });
+        io.sockets.emit ('user_disconnect', ann);
+        people.splice(i, 1);
+        io.emit('people', people);
+      }
+    }
   });
 
   socket.on('chat message', function(msg){
     message = msg;
-    //console.log(msg);
-    io.emit('chat message', msg);
+    io.emit('chat message', message);
   });
+
+  socket.on('people', function(ppl) {
+    people = ppl;
+    //console.log(ppl);
+    io.emit('people', people);
+  });
+
+  socket.on('ids', function(id) {
+    ids = id;
+    io.emit('ids', ids);
+  });
+
+  socket.on('height', function(height) {
+    h = height;
+    io.emit('height', height);
+  });
+
 });
 
 /**

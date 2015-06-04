@@ -1,0 +1,164 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.10.1
+3 info using node@v0.12.4
+4 verbose node symlink /usr/local/bin/node
+5 verbose readDependencies loading dependencies from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/package.json
+6 verbose install where, deps [ '/Users/joanchen/Documents/Delta Internship 2015/myChatApp',
+6 verbose install   [ 'angular',
+6 verbose install     'body-parser',
+6 verbose install     'browserify',
+6 verbose install     'btford.socket-io',
+6 verbose install     'cookie-parser',
+6 verbose install     'debug',
+6 verbose install     'es6ify',
+6 verbose install     'express',
+6 verbose install     'jade',
+6 verbose install     'mongoose',
+6 verbose install     'morgan',
+6 verbose install     'nodemon',
+6 verbose install     'querystring',
+6 verbose install     'serve-favicon',
+6 verbose install     'socket.io' ] ]
+7 verbose install where, peers [ '/Users/joanchen/Documents/Delta Internship 2015/myChatApp',
+7 verbose install   [] ]
+8 verbose installManyTop reading for lifecycle /Users/joanchen/Documents/Delta Internship 2015/myChatApp/package.json
+9 info preinstall joanchen@0.0.0
+10 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/angular/package.json
+11 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/body-parser/package.json
+12 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/browserify/package.json
+13 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/cookie-parser/package.json
+14 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/debug/package.json
+15 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/es6ify/package.json
+16 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/express/package.json
+17 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/jade/package.json
+18 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/mongodb/package.json
+19 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/mongoose/package.json
+20 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/morgan/package.json
+21 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/nodemon/package.json
+22 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/oauth20-provider/package.json
+23 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/querystring/package.json
+24 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/react/package.json
+25 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/react-tap-event-plugin/package.json
+26 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/serve-favicon/package.json
+27 verbose installManyTop reading scoped package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/socket.io/package.json
+28 info package.json nodemon@1.3.7 No license field.
+29 info package.json querystring@0.2.0 querystring is also the name of a node core module.
+30 info package.json querystring@0.2.0 No license field.
+31 info package.json socket.io@1.3.5 No license field.
+32 info package.json mongodb@2.0.33 license should be a valid SPDX license expression
+33 info package.json react-tap-event-plugin@0.1.7 No license field.
+34 info package.json oauth20-provider@0.6.0 No license field.
+35 verbose readDependencies loading dependencies from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/package.json
+36 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/angular/package.json
+37 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/body-parser/package.json
+38 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/browserify/package.json
+39 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/cookie-parser/package.json
+40 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/debug/package.json
+41 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/es6ify/package.json
+42 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/express/package.json
+43 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/jade/package.json
+44 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/mongodb/package.json
+45 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/mongoose/package.json
+46 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/morgan/package.json
+47 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/nodemon/package.json
+48 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/oauth20-provider/package.json
+49 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/querystring/package.json
+50 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/react/package.json
+51 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/react-tap-event-plugin/package.json
+52 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/serve-favicon/package.json
+53 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/socket.io/package.json
+54 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/.bin/browserify/package.json
+55 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/.bin/jade/package.json
+56 verbose targetResolver reading package data from /Users/joanchen/Documents/Delta Internship 2015/myChatApp/node_modules/.bin/nodemon/package.json
+57 verbose already installed skipping es6ify@^1.6.0 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+58 verbose already installed skipping express@~4.12.4 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+59 verbose already installed skipping jade@~1.9.2 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+60 verbose already installed skipping mongoose@^4.0.4 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+61 verbose already installed skipping morgan@~1.5.3 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+62 verbose already installed skipping nodemon@^1.3.7 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+63 verbose already installed skipping querystring@^0.2.0 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+64 verbose already installed skipping serve-favicon@~2.2.1 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+65 verbose already installed skipping socket.io@^1.3.5 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+66 verbose already installed skipping angular@^1.4.0 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+67 verbose already installed skipping body-parser@~1.12.4 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+68 verbose already installed skipping browserify@^10.2.1 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+69 silly cache add args [ 'btford.socket-io@*', null ]
+70 verbose cache add spec btford.socket-io@*
+71 silly cache add parsed spec { raw: 'btford.socket-io@*',
+71 silly cache add   scope: null,
+71 silly cache add   name: 'btford.socket-io',
+71 silly cache add   rawSpec: '*',
+71 silly cache add   spec: '*',
+71 silly cache add   type: 'range' }
+72 silly addNamed btford.socket-io@*
+73 verbose addNamed "*" is a valid semver range for btford.socket-io
+74 silly addNameRange { name: 'btford.socket-io', range: '*', hasData: false }
+75 silly mapToRegistry name btford.socket-io
+76 silly mapToRegistry using default registry
+77 silly mapToRegistry registry https://registry.npmjs.org/
+78 silly mapToRegistry uri https://registry.npmjs.org/btford.socket-io
+79 verbose addNameRange registry:https://registry.npmjs.org/btford.socket-io not in flight; fetching
+80 verbose already installed skipping cookie-parser@~1.3.5 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+81 verbose already installed skipping debug@~2.2.0 /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+82 verbose request uri https://registry.npmjs.org/btford.socket-io
+83 verbose request no auth needed
+84 info attempt registry request try #1 at 09:22:08
+85 verbose request id 91da9ad574b3596f
+86 http request GET https://registry.npmjs.org/btford.socket-io
+87 http 404 https://registry.npmjs.org/btford.socket-io
+88 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+88 verbose headers   'content-type': 'application/json',
+88 verbose headers   'cache-control': 'max-age=0',
+88 verbose headers   'content-length': '51',
+88 verbose headers   'accept-ranges': 'bytes',
+88 verbose headers   date: 'Thu, 04 Jun 2015 01:22:10 GMT',
+88 verbose headers   via: '1.1 varnish',
+88 verbose headers   age: '0',
+88 verbose headers   connection: 'keep-alive',
+88 verbose headers   'x-served-by': 'cache-bma7020-BMA',
+88 verbose headers   'x-cache': 'MISS',
+88 verbose headers   'x-cache-hits': '0',
+88 verbose headers   'x-timer': 'S1433380930.156652,VS0,VE744' }
+89 silly get cb [ 404,
+89 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+89 silly get     'content-type': 'application/json',
+89 silly get     'cache-control': 'max-age=0',
+89 silly get     'content-length': '51',
+89 silly get     'accept-ranges': 'bytes',
+89 silly get     date: 'Thu, 04 Jun 2015 01:22:10 GMT',
+89 silly get     via: '1.1 varnish',
+89 silly get     age: '0',
+89 silly get     connection: 'keep-alive',
+89 silly get     'x-served-by': 'cache-bma7020-BMA',
+89 silly get     'x-cache': 'MISS',
+89 silly get     'x-cache-hits': '0',
+89 silly get     'x-timer': 'S1433380930.156652,VS0,VE744' } ]
+90 verbose stack Error: 404 Not Found: btford.socket-io
+90 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:245:14)
+90 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+90 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:368:22)
+90 verbose stack     at Request.emit (events.js:110:17)
+90 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1219:14)
+90 verbose stack     at Request.emit (events.js:129:20)
+90 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1167:12)
+90 verbose stack     at IncomingMessage.emit (events.js:129:20)
+90 verbose stack     at _stream_readable.js:908:16
+90 verbose stack     at process._tickCallback (node.js:355:11)
+91 verbose statusCode 404
+92 verbose pkgid btford.socket-io
+93 verbose cwd /Users/joanchen/Documents/Delta Internship 2015/myChatApp
+94 error Darwin 14.3.0
+95 error argv "node" "/usr/local/bin/npm" "install"
+96 error node v0.12.4
+97 error npm  v2.10.1
+98 error code E404
+99 error 404 Not Found: btford.socket-io
+99 error 404
+99 error 404 'btford.socket-io' is not in the npm registry.
+99 error 404 You should bug the author to publish it (or use the name yourself!)
+99 error 404 It was specified as a dependency of 'joanchen'
+99 error 404
+99 error 404 Note that you can also install from a
+99 error 404 tarball, folder, http url, or git url.
+100 verbose exit [ 1, true ]

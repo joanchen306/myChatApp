@@ -5,6 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var query = require('querystring');
+
+//var oauth2lib = require('./oauth20-provider.js');
+//var oauth2 = new oauth2lib({log: {level: 2}});
 
 var routes = require('./routes/index');
 var chats = require('./routes/chat');
@@ -26,6 +30,30 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/chat', chats);
+
+//app.use(oauth2.inject());
+/*
+
+//token endpoint
+app.post('/token', oauth2.controller.token);
+
+//authorization endpoint
+app.get('/authorization', isAuthorized, oauth2.controller.authorization, function(req, res) {
+  //render decision page
+  res.render('/authorization', {layout: false});
+});
+app.post('/authorization', isAuthorized, oauth2.controller.authorization);
+
+function isAuthorized(req, res, next) {
+  if(req.session.authorized) next();
+  else {
+    var params = req.query;
+    params.backUrl = req.path;
+    res.redirect('/login?' + query.stringify(params));
+  }
+}
+*/
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
